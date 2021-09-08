@@ -184,7 +184,7 @@ int main(void)
 
 	  HAL_GPIO_TogglePin(LD2_GPIO_Port, LD2_Pin);
 	  HAL_Delay(500);
-xuifdfdfdf;
+
 //	  for (var = 0; var < 20000; ++var) {
 //		  if(adcm1[var]>50)
 //			  break;
