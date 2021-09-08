@@ -12,7 +12,7 @@ val=str2num(convertStringsToChars(readline(s1)));
 while val~= 5000
 val=str2num(convertStringsToChars(readline(s1)));
 end
-A = [A, val]
+for c =1:10
 val=str2num(convertStringsToChars(readline(s1)));
 while val~= 5000
 
@@ -23,9 +23,13 @@ while val~= 5000
     
 
 end
-%figure
 
+figure
 plot(A)
-%pause(0.1)
+pause(0.1)
+clear A
+A = []
+end
+
 
 clear s1
