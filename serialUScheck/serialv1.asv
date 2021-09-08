@@ -1,0 +1,30 @@
+clc
+clear all
+close all
+port = serialportlist;
+s1 = serialport(port(1), 115200,"Timeout",10);
+s1.Timeout = 2;
+flush(s1);
+val='';
+while(str2num(convertStringsToChars(readline(s1)))~=5000)end
+for c = 1:10
+
+clear A
+A=[];
+while(length(A)<5)
+val=str2num(convertStringsToChars(readline(s1)));
+
+while(val~=5000)
+    %if(val>2)
+        A=[A,val];
+    %end
+    val=str2num(convertStringsToChars(readline(s1)));
+    
+    
+end
+end
+%figure
+plot(A)
+pause(0.1)
+end
+clear s1
