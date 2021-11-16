@@ -22,7 +22,8 @@ A(length(A))=[];
 plot(A(1:find(A == 5000)-1))
 
 pause(0.1)
-A = A(find(A == 5000)+1:end)
+A = A(find(A == 5000)+1:end);
+writematrix(A', 'table.txt','WriteMode','append');
 end
 
 
